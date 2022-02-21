@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple tic-tac-toe</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="gameHeader">You: <span class="player">X</span>, AI: <span class="ai">O</span></div>
+        <div id="gameContainer"></div>
+        <div class="gameFooter">
+            <button onclick="restart()">Restart</button>
+        </div>
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            const game = new Game("gameContainer", 3, 3);
+            game.init();
+            game.start();
+
+            function restart() {
+                game.start();
+            }
+        </script>
+    </body>
+</html>

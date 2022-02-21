@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+}
+
+.gameHeader, .gameFooter {
+    text-align: center;
+    padding: 25px 0;
+}
+
+._tttBoardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._tttBoard {
+    width: 20%;
+    margin: 0 auto;
+}
+
+._tttBoardRow {
+    display: flex;
+    box-sizing: border-box;
+}
+
+._tttBoardCell {
+    width: 33.33%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+._tttBoardCell::after {
+    content: "";
+    display: inline-block;
+    padding-bottom: 100%;
+}
+
+._tttBoard ._tttBoardRow:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+._tttBoard ._tttBoardRow ._tttBoardCell:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.player {
+    color: red;
+}
+
+.ai {
+    color: green;
+}
